@@ -152,8 +152,8 @@ export function HeroSection() {
         </div>
 
         {/* ── Left: hero text — normal flow ── */}
-        <div className="relative w-full px-25">
-          <div className="flex flex-col gap-7 max-w-205 lg:max-w-[46vw] xl:max-w-[44vw] pt-32 pb-24 lg:pt-40 lg:pb-32">
+        <div className="relative w-full px-4 sm:px-8 lg:px-25">
+          <div className="flex flex-col gap-5 sm:gap-7 max-w-full lg:max-w-[46vw] xl:max-w-[44vw] pt-24 pb-48 sm:pt-28 sm:pb-32 lg:pt-40 lg:pb-32">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 max-w-full">
               <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />

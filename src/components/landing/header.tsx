@@ -167,7 +167,7 @@ export function LandingHeader() {
             : "bg-white border-b",
         )}
       >
-        <div className="relative mx-auto flex h-18 max-w-full items-center justify-between px-25">
+        <div className="relative mx-auto flex h-16 lg:h-18 max-w-full items-center justify-between px-4 sm:px-6 lg:px-25">
           <Logo />
 
           {/* Desktop Nav */}

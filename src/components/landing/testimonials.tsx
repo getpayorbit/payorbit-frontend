@@ -67,33 +67,33 @@ const TESTIMONIALS = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-[#f3f3f3]">
-      <div className="mx-auto max-w-full px-25">
-        <div className="grid grid-cols-[42%_1fr] gap-24 items-start">
+    <section id="testimonials" className="py-16 md:py-32 bg-[#f3f3f3]">
+      <div className="mx-auto max-w-full px-4 sm:px-8 lg:px-25">
+        {/* Mobile: stacked. lg+: 2-col side by side */}
+        <div className="grid grid-cols-1 lg:grid-cols-[42%_1fr] gap-10 lg:gap-24 items-start">
           {/* Left: headline + image */}
-          <div className="pt-1 flex flex-col gap-8">
+          <div className="pt-1 flex flex-col gap-6 lg:gap-8">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#5501ff] mb-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#5501ff] mb-4 lg:mb-6">
                 What teams are saying
               </p>
-              <h2 className="font-(family-name:--font-dm-sans) text-[3.2rem] font-bold leading-[1.04] tracking-tight text-[#0d0020] md:text-[3.6rem]">
+              <h2 className="font-(family-name:--font-dm-sans) text-2xl sm:text-3xl lg:text-[3.2rem] xl:text-[3.6rem] font-bold leading-[1.04] tracking-tight text-[#0d0020]">
                 Trusted by global finance & HR teams.
               </h2>
             </div>
 
-            {/* Image slot — replace src with real image */}
-            <div className="rounded-xl overflow-hidden w-full aspect-[4/3] bg-[#e8eaf0]">
+            {/* Image — hidden on mobile to save space */}
+            <div className="hidden sm:block rounded-xl overflow-hidden w-full aspect-[4/3] bg-[#e8eaf0]">
               <img
                 src="/1.jpg"
-                alt="Photo by Lala Azizli
-      "
+                alt="Teams using PayOrbit"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          {/* Right: 2×3 grid */}
-          <div className="grid grid-cols-2">
+          {/* Right: 2×3 grid — 1 col mobile, 2 col sm+ */}
+          <div className="grid grid-cols-1 sm:grid-cols-2">
             {TESTIMONIALS.map((t, i) => {
               const isLastRow = i >= TESTIMONIALS.length - 2;
               const isRightCol = i % 2 === 1;
@@ -101,9 +101,10 @@ export function TestimonialsSection() {
                 <div
                   key={t.name}
                   className={[
-                    "flex flex-col justify-between p-8 min-h-[220px] bg-[#f3f3f3] transition-colors duration-200 hover:bg-white group",
-                    !isLastRow ? "border-b border-[#d0d0d0]" : "",
-                    !isRightCol ? "border-r border-[#d0d0d0]" : "",
+                    "flex flex-col justify-between p-5 sm:p-6 lg:p-8 min-h-[180px] sm:min-h-[220px] bg-[#f3f3f3] transition-colors duration-200 hover:bg-white group border-b border-[#d0d0d0]",
+                    !isLastRow && "sm:border-b",
+                    isLastRow && "border-b-0 sm:border-b-0",
+                    !isRightCol ? "sm:border-r border-[#d0d0d0]" : "",
                   ]
                     .filter(Boolean)
                     .join(" ")}

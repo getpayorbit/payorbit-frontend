@@ -4,24 +4,30 @@ import { routes } from "../../lib/utils/routes";
 
 export function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-[#ede9ff] py-32 md:py-40">
-      {/* Subtle concentric ring pattern */}
+    <section className="relative overflow-hidden bg-[#ede9ff] py-20 md:py-32 lg:py-40">
+      {/* Concentric rings — scaled down on mobile */}
       <div className="pointer-events-none absolute inset-0 flex items-end justify-center">
+        {[400, 320, 240, 160, 100].map((size) => (
+          <div
+            key={size}
+            className="absolute bottom-0 translate-y-1/2 rounded-full border border-[#5501ff]/10 sm:hidden"
+            style={{ width: size, height: size }}
+          />
+        ))}
         {[600, 500, 400, 300, 200].map((size) => (
           <div
             key={size}
-            className="absolute bottom-0 translate-y-1/2 rounded-full border border-[#5501ff]/10"
+            className="absolute bottom-0 translate-y-1/2 rounded-full border border-[#5501ff]/10 hidden sm:block"
             style={{ width: size, height: size }}
           />
         ))}
       </div>
 
       {/* Content */}
-      <div className="relative mx-auto max-w-full px-6 text-center">
-        
+      <div className="relative mx-auto max-w-2xl px-4 sm:px-6 text-center">
 
         {/* Headline */}
-        <h2 className="font-(family-name:--font-dm-sans) text-[2.8rem] font-bold leading-[1.05] tracking-tight text-[#5501ff] md:text-[3.6rem]">
+        <h2 className="font-(family-name:--font-dm-sans) text-2xl sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.6rem] font-bold leading-[1.05] tracking-tight text-[#5501ff]">
           The fastest payroll decision you&apos;ll ever make.
         </h2>
 

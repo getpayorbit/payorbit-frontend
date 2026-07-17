@@ -100,14 +100,14 @@ const SOCIALS = [
 export function LandingFooter() {
   return (
     <footer className="bg-[#faf9f7] border-t border-[#e8e6e0]">
-      <div className="mx-auto max-w-full px-25 pt-16 pb-10">
+      <div className="mx-auto max-w-full px-4 sm:px-8 lg:px-25 pt-12 md:pt-16 pb-10">
 
-        {/* Row 1: Logo + socials on left, 4 link columns on right */}
-        <div className="grid grid-cols-[220px_1fr] gap-16 mb-14">
+        {/* Mobile: brand + links stacked. lg+: side by side */}
+        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[220px_1fr] lg:gap-16 mb-10 lg:mb-14">
           {/* Brand */}
           <div className="flex flex-col gap-5">
             <Logo />
-            <div className="flex items-center gap-2 mt-1">
+            <div className="flex items-center gap-2">
               {SOCIALS.map((s) => (
                 <a
                   key={s.label}
@@ -121,8 +121,8 @@ export function LandingFooter() {
             </div>
           </div>
 
-          {/* 4 columns */}
-          <div className="grid grid-cols-4 gap-8">
+          {/* 4 link columns — 2 cols mobile, 4 cols lg */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {ROW_ONE.map((col) => (
               <div key={col.title}>
                 <p className="mb-4 text-xs font-semibold text-[#1f1f1f] tracking-wide">
@@ -145,10 +145,10 @@ export function LandingFooter() {
           </div>
         </div>
 
-        {/* Row 2: offset columns (no brand column) */}
-        <div className="grid grid-cols-[220px_1fr] gap-16 mb-16">
-          <div />
-          <div className="grid grid-cols-4 gap-8">
+        {/* Row 2 — offset on lg, stacked on mobile */}
+        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[220px_1fr] lg:gap-16 mb-10 lg:mb-16">
+          <div className="hidden lg:block" />
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {ROW_TWO.map((col) => (
               <div key={col.title}>
                 <p className="mb-4 text-xs font-semibold text-[#1f1f1f] tracking-wide">
@@ -172,7 +172,7 @@ export function LandingFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-[#e8e6e0] pt-8 flex items-center justify-between gap-8">
+        <div className="border-t border-[#e8e6e0] pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div className="flex items-center gap-6 text-xs text-[#1f1f1f]/80">
             <span>© {new Date().getFullYear()} PayOrbit.</span>
             <Link href="#" className="hover:text-[#1f1f1f] transition-colors">Terms</Link>

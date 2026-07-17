@@ -404,10 +404,10 @@ export function FeaturesSection() {
   );
 
   return (
-    <section id="features" className="py-20 md:py-28 bg-[#f3f3f3] overflow-hidden">
-      <div className="mx-auto max-w-full px-25">
-        <div className="flex items-end justify-between mb-12 gap-6">
-          <div className="max-w-auto space-y-6">
+    <section id="features" className="py-16 md:py-28 bg-[#f3f3f3] overflow-hidden">
+      <div className="mx-auto max-w-full px-4 sm:px-8 lg:px-25">
+        <div className="flex items-end justify-between mb-8 md:mb-12 gap-6">
+          <div className="max-w-auto space-y-4 sm:space-y-6">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 max-w-full">
               <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -417,7 +417,7 @@ export function FeaturesSection() {
                 Platform Features
               </span>
             </div>
-            <h2 className="font-(family-name:--font-dm-sans) text-4xl font-bold leading-[1.08] text-[#0d0020] md:text-5xl capitalize">
+            <h2 className="font-(family-name:--font-dm-sans) text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.08] text-[#0d0020] capitalize">
               The infrastructure behind the PayOrbit stack.
             </h2>
           </div>
@@ -448,7 +448,7 @@ export function FeaturesSection() {
       <div
         ref={scrollRef}
         onScroll={onScroll}
-        className="flex gap-5 overflow-x-auto pb-2 pl-25 pr-25"
+        className="flex gap-4 overflow-x-auto pb-2 pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-25 lg:pr-25"
         style={{ scrollbarWidth: "none" }}
       >
         {columns.map((col, ci) => (
@@ -458,7 +458,7 @@ export function FeaturesSection() {
               return (
                 <div
                   key={feature.title}
-                  className="w-[340px] h-[220px] rounded-lg border border-white bg-white p-8 shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all duration-200 hover:shadow-[0_4px_24px_rgba(0,0,0,0.10)] hover:border-[#5501ff]/20 flex flex-col"
+                  className="w-[280px] sm:w-[310px] lg:w-[340px] h-[200px] sm:h-[210px] lg:h-[220px] rounded-lg border border-white bg-white p-5 sm:p-6 lg:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all duration-200 hover:shadow-[0_4px_24px_rgba(0,0,0,0.10)] hover:border-[#5501ff]/20 flex flex-col"
                 >
                   <div className="mb-6">
                     <Icon />

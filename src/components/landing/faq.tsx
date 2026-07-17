@@ -105,11 +105,11 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-white">
-      <div className="mx-auto max-w-full px-25">
+    <section id="faq" className="py-16 md:py-28 bg-white">
+      <div className="mx-auto max-w-full px-4 sm:px-8 lg:px-25">
 
         {/* Header */}
-        <h2 className="font-(family-name:--font-dm-sans) text-4xl font-bold text-[#0d0020] mb-12 md:text-5xl">
+        <h2 className="font-(family-name:--font-dm-sans) text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0d0020] mb-8 md:mb-12">
           Frequently asked questions
         </h2>
 
