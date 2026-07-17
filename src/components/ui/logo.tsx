@@ -9,7 +9,7 @@ const Logo = ({ className }: { className?: string }) => {
 				src="/logo/Fulll Logo/SVG/FullLogoColor1.svg"
 				height={36}
 				width={140}
-				className="h-9 w-auto object-contain"
+				className="h-7 w-auto object-contain sm:h-8 lg:h-9"
 				priority
 			/>
 		</Link>
