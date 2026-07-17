@@ -404,7 +404,7 @@ export function FeaturesSection() {
   );
 
   return (
-    <section id="features" className="py-20 md:py-28 bg-white overflow-hidden">
+    <section id="features" className="py-20 md:py-28 bg-[#f3f3f3] overflow-hidden">
       <div className="mx-auto max-w-full px-25">
         <div className="flex items-end justify-between mb-12 gap-6">
           <div className="max-w-auto space-y-6">
@@ -458,7 +458,7 @@ export function FeaturesSection() {
               return (
                 <div
                   key={feature.title}
-                  className="w-[340px] h-[220px] border border-[#e8eaf0] bg-white p-8 transition-all duration-200 hover:shadow-md hover:border-[#5501ff]/20 flex flex-col"
+                  className="w-[340px] h-[220px] rounded-lg border border-white bg-white p-8 shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all duration-200 hover:shadow-[0_4px_24px_rgba(0,0,0,0.10)] hover:border-[#5501ff]/20 flex flex-col"
                 >
                   <div className="mb-6">
                     <Icon />

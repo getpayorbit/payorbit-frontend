@@ -165,7 +165,7 @@ export function HeroSection() {
             </div>
             <h1
               ref={headlineRef}
-              className="font-(family-name:--font-dm-sans) text-[3rem] font-bold leading-[1.06] tracking-tight text-black md:text-[3.6rem] lg:text-[6.4rem]"
+              className="font-(family-name:--font-dm-sans) text-[3rem] font-bold leading-[1.06] tracking-tight text-black md:text-[3.6rem] lg:text-[4.8rem]"
             >
               Pay your global team{" "}
               <span className="bg-primary bg-clip-text text-transparent">
@@ -325,8 +325,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* ── Floating cards — overlap white/image boundary ── */}
-        {/* Container has explicit width so both cards are clamped within viewport */}
+        
         <div
           ref={cardsRef}
           className="hidden lg:block absolute bottom-64 xl:bottom-72 3xl:bottom-140 z-20"

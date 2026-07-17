@@ -33,8 +33,8 @@ export default function DashboardLayout({
 						isOpen={sidebarOpen}
 						onClose={() => setSidebarOpen(false)}
 					/>
-					<main className="flex-1 overflow-auto scroll-smooth">
-						<div className="container mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
+					<main className="flex-1 overflow-auto scroll-smooth bg-[#f8f8fb]">
+						<div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
 							{children}
 						</div>
 					</main>

@@ -68,7 +68,7 @@ const ROW_TWO = [
   },
 ];
 
-const INVESTORS = ["Stellar Foundation", "Andreessen Horowitz", "Coinbase Ventures", "Circle", "Sequoia"];
+const INVESTORS = ["Stellar Foundation"];
 
 const SOCIALS = [
   {
@@ -173,19 +173,10 @@ export function LandingFooter() {
 
         {/* Bottom bar */}
         <div className="border-t border-[#e8e6e0] pt-8 flex items-center justify-between gap-8">
-          <div className="flex items-center gap-6 text-xs text-[#1f1f1f]/40">
-            <span>© {new Date().getFullYear()} PayOrbit, Inc.</span>
+          <div className="flex items-center gap-6 text-xs text-[#1f1f1f]/80">
+            <span>© {new Date().getFullYear()} PayOrbit.</span>
             <Link href="#" className="hover:text-[#1f1f1f] transition-colors">Terms</Link>
             <Link href="#" className="hover:text-[#1f1f1f] transition-colors">Privacy</Link>
-          </div>
-
-          {/* Backer logos */}
-          <div className="flex items-center gap-8">
-            {INVESTORS.map((name) => (
-              <span key={name} className="text-xs font-semibold text-[#1f1f1f]/25 tracking-wide uppercase">
-                {name}
-              </span>
-            ))}
           </div>
         </div>
 

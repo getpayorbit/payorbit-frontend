@@ -109,9 +109,10 @@ export function DashboardSidebar({
 
 	return (
 		<>
+			{/* Mobile overlay */}
 			<div
 				className={cn(
-					"fixed inset-0 z-30 bg-black/50 transition-opacity duration-200 md:hidden",
+					"fixed inset-0 z-30 bg-black/60 backdrop-blur-sm transition-opacity duration-200 md:hidden",
 					isOpen
 						? "pointer-events-auto opacity-100"
 						: "pointer-events-none opacity-0",
@@ -121,12 +122,15 @@ export function DashboardSidebar({
 
 			<aside
 				className={cn(
-					"fixed left-0 top-16 z-40 flex h-[calc(100vh-4rem)] w-64 flex-col border-r bg-sidebar transition-transform duration-200 ease-in-out",
+					"fixed left-0 top-16 z-40 flex h-[calc(100vh-4rem)] w-64 flex-col border-r border-white/8 bg-[#0d0020] transition-transform duration-200 ease-in-out",
 					"md:relative md:top-0 md:h-full md:translate-x-0",
 					isOpen ? "translate-x-0" : "-translate-x-full",
 				)}
 			>
-				<nav className="mt-3 flex flex-1 flex-col gap-1 p-4">
+				{/* Brand gradient top stripe */}
+				<div className="h-[2px] w-full shrink-0 bg-gradient-to-r from-[#5501ff] via-[#ff00a6] to-[#00ffbb]" />
+
+				<nav className="mt-2 flex flex-1 flex-col gap-0.5 overflow-y-auto p-3">
 					{navItems.map((item, index) => {
 						const Icon = item.icon;
 						const isActive =
@@ -145,10 +149,10 @@ export function DashboardSidebar({
 									transition: `opacity 0.3s ease ${index * 50}ms, transform 0.3s ease ${index * 50}ms`,
 								}}
 								className={cn(
-									"group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-150",
+									"group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-150",
 									isActive
-										? "bg-sidebar-primary text-sidebar-primary-foreground shadow-sm shadow-primary/20"
-										: "text-sidebar-foreground hover:bg-sidebar-accent/80 hover:text-sidebar-accent-foreground",
+										? "bg-[#5501ff] text-white shadow-[0_2px_12px_rgba(85,1,255,0.4)]"
+										: "text-white/55 hover:bg-white/8 hover:text-white",
 								)}
 							>
 								<Icon
@@ -164,19 +168,20 @@ export function DashboardSidebar({
 					})}
 				</nav>
 
-				<div className="border-t p-4">
-					<div className="mb-3 rounded-xl bg-muted/50 p-3">
+				{/* User card + logout */}
+				<div className="border-t border-white/8 p-3">
+					<div className="mb-2 rounded-lg bg-white/6 p-3">
 						<div className="flex items-center gap-3">
-							<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
-								<span className="text-xs font-semibold text-primary">
+							<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#5501ff]/30 ring-1 ring-[#5501ff]/50">
+								<span className="text-xs font-bold text-white">
 									{userInitial}
 								</span>
 							</div>
 							<div className="min-w-0 flex-1">
-								<p className="truncate text-sm font-medium text-foreground">
+								<p className="truncate text-sm font-semibold text-white">
 									{capitalizeWords(displayName)}
 								</p>
-								<p className="truncate text-xs text-muted-foreground">
+								<p className="truncate text-[11px] text-white/40">
 									{user?.email}
 								</p>
 							</div>
@@ -187,7 +192,7 @@ export function DashboardSidebar({
 						variant="ghost"
 						size="sm"
 						onClick={handleLogout}
-						className="w-full justify-start gap-2 text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive"
+						className="w-full justify-start gap-2 text-white/40 transition-colors hover:bg-red-500/15 hover:text-red-400"
 					>
 						<LogOut className="h-4 w-4" />
 						Sign out
