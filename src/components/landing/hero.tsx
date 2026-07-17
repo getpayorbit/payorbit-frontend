@@ -153,7 +153,7 @@ export function HeroSection() {
 
         {/* ── Left: hero text — normal flow ── */}
         <div className="relative w-full px-25">
-          <div className="flex flex-col gap-7 max-w-205 pt-32 pb-24 lg:pt-40 lg:pb-32">
+          <div className="flex flex-col gap-7 max-w-205 lg:max-w-[46vw] xl:max-w-[44vw] pt-32 pb-24 lg:pt-40 lg:pb-32">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 max-w-full">
               <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -219,8 +219,9 @@ export function HeroSection() {
         <div
           className="hidden lg:block absolute z-10"
           style={{
-            top: "14%",
-            right: "14%",
+            top: "12%",
+            right: "clamp(2%, 6vw, 12%)",
+            width: "clamp(240px, 26vw, 390px)",
             opacity: mounted ? 1 : 0,
             transform: mounted
               ? "translateY(0) scale(1)"
@@ -230,7 +231,7 @@ export function HeroSection() {
         >
           <div className="absolute -top-10 -right-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
           <div className="absolute top-40 -left-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
-          <div className="relative rounded border border-[#e8eaf0] bg-white/90 backdrop-blur-md p-6 shadow-2xl shadow-primary/8 w-166">
+          <div className="relative rounded border border-[#e8eaf0] bg-white/90 backdrop-blur-md p-6 shadow-2xl shadow-primary/8 w-full">
             {/* Header */}
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-2.5">
@@ -328,8 +329,12 @@ export function HeroSection() {
         
         <div
           ref={cardsRef}
-          className="hidden lg:block absolute bottom-64 xl:bottom-72 3xl:bottom-140 z-20"
-          style={{ right: "2%", width: "clamp(360px, 42vw, 620px)" }}
+          className="hidden lg:block absolute z-20"
+          style={{
+            bottom: "clamp(160px, 20vh, 320px)",
+            right: "1%",
+            width: "clamp(280px, 34vw, 520px)",
+          }}
         >
           {/* Card 1: Payroll run in progress */}
           <div className="w-[65%] rounded bg-white border border-[#1f1f1f]/10 shadow-[0_20px_64px_rgba(0,0,0,0.13)] overflow-hidden">
