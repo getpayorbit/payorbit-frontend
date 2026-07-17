@@ -165,7 +165,7 @@ export function HeroSection() {
             </div>
             <h1
               ref={headlineRef}
-              className="font-(family-name:--font-dm-sans) text-[3rem] font-bold leading-[1.06] tracking-tight text-black md:text-[3.6rem] lg:text-[4.8rem]"
+              className="font-(family-name:--font-dm-sans) text-[2.2rem] font-bold leading-[1.06] tracking-tight text-black sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.8rem] xl:text-[4.4rem] 2xl:text-[5rem]"
             >
               Pay your global team{" "}
               <span className="bg-primary bg-clip-text text-transparent">
