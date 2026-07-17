@@ -199,7 +199,7 @@ export function HeroSection() {
                   href={routes.authRoutes.SIGN_UP}
                   className="flex items-center gap-2"
                 >
-                  Get started now
+                  Get started free
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </Button>
@@ -220,12 +220,10 @@ export function HeroSection() {
           className="hidden lg:block absolute z-10"
           style={{
             top: "12%",
-            right: "clamp(2%, 6vw, 12%)",
+            left: "50%",
             width: "clamp(240px, 26vw, 390px)",
             opacity: mounted ? 1 : 0,
-            transform: mounted
-              ? "translateY(0) scale(1)"
-              : "translateY(20px) scale(0.97)",
+            transform: mounted ? "translateY(0) scale(1)" : "translateY(20px) scale(0.97)",
             transition: "opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s",
           }}
         >
